@@ -15,15 +15,33 @@
  */
 package org.japo.java.main;
 
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.Random;
+
 /**
  *
  * @author Bianca Antonela Glavan - biancaantonela.glavan.alum@iescamp.es
  */
 public class Main {
+
+    public static final Scanner SCN
+            = new Scanner(System.in, "Windows-1252")
+                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
+    public static final Random RND = new Random();
+
     public static void main(String[] args) {
-        
-    
-        
+
+        //int balance = RND.nextInt();
+        final int TALLA_MIN = 20;
+        final int TALLA_MAX = 60;
+
+        int talla;
+
+        talla = RND.nextInt(TALLA_MAX - TALLA_MIN + 1) + TALLA_MIN;
+
+        System.out.printf("Talla de zapato....: %d%n", talla);
+
     }
-    
+
 }
